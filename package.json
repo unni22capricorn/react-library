@@ -1,0 +1,33 @@
+{
+  "name": "react-library",
+  "version": "1.0.0",
+  "description": "react component library for a social network application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unni22capricorn/react-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unni22capricorn/react-library/issues"
+  },
+  "homepage": "https://github.com/unni22capricorn/react-library#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.11.1",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
