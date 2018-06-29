@@ -33,10 +33,10 @@ class Login extends React.Component {
     handleSubmit = (e) => {
         fetch('https://url', {
             method: 'POST',
-            body: {
+            body: JSON.stringify({
                 username: this.state.userName,
                 password: this.state.password
-            }
+            })
         }).then((response) => {
             alert(response);
         });
