@@ -1,4 +1,9 @@
 .wrapper {
     background: red;
     color: white;
+    padding: 10px;
+}
+
+.login-wrapper {
+    background: lightseagreen;
 }

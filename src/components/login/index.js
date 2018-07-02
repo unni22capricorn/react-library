@@ -5,18 +5,22 @@ class Login extends React.Component {
         super(props);
         this.state = {
             userName: "",
-            password: ""
+            password: "",
+            clicked: 'false'
         };
     }
     render() {
         return (
-            <div>
-                <label>Login: </label>
+            <div className='login-wrapper'>
+                <h4>Login: </h4>
                 <input onChange={ this.handleUsernameChange } type = "text" placeholder = "Username"/>
                 <input onChange={ this.handlePasswordChange } type = "password" placeholder = "Password"/>
-                <button type= "Submit" onClick={ this.handleSubmit }>Submit</button>
+                <button type= "Submit" onClick={ this.handleSubmit }>Button from Login Component</button>
+                <button type= "Submit" onClick={ () => { this.props.onClick('hello') } }>Button from Login Component for parent method</button>
                 <div>{ this.state.userName }</div>
                 <div>{ this.state.password }</div>
+                <div>Test: { this.props.test }</div>
+                <div>Clicked: { this.state.clicked }</div>
             </div>
         );
     }
@@ -31,14 +35,16 @@ class Login extends React.Component {
         });
     }
     handleSubmit = (e) => {
-        fetch('https://url', {
-            method: 'POST',
-            body: JSON.stringify({
-                username: this.state.userName,
-                password: this.state.password
-            })
-        }).then((response) => {
-            alert(response);
+        this.setState({ clicked: 'true' }, () => {
+            // fetch('https://url', {
+            //     method: 'POST',
+            //     body: JSON.stringify({
+            //         username: this.state.userName,
+            //         password: this.state.password
+            //     })
+            // }).then((response) => {
+            //     alert(response);
+            // });
         });
     }
 }
